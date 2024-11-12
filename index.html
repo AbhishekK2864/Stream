@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Path Suggestions</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Find Your Career Path</h1>
+        <p>Discover the best career options based on your interests, scores, and hobbies.</p>
+    </header>
+    
+    <main>
+        <section class="form-section">
+            <form id="careerForm">
+                <!-- 1. Personal Information -->
+                <h2>Personal Information</h2>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="10" max="100" required>
+
+                <label for="grade">Grade Level:</label>
+                <select id="grade" name="grade">
+                    <option value="10">Grade 10</option>
+                    <option value="11">Grade 11</option>
+                    <option value="12">Grade 12</option>
+                    <option value="undergraduate">Undergraduate</option>
+                    <option value="postgraduate">Postgraduate</option>
+                </select>
+
+                <!-- 2. Academic Performance -->
+                <h2>Academic Performance</h2>
+                <label for="average-grade">Average Grades (%):</label>
+                <input type="number" id="average-grade" name="average-grade" min="0" max="100" step="0.1" required>
+
+                <label>Preferred Subjects:</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" name="subjects" value="Mathematics"> Mathematics
+                    <input type="checkbox" name="subjects" value="Science"> Science
+                    <input type="checkbox" name="subjects" value="English"> English
+                    <input type="checkbox" name="subjects" value="History"> History
+                    <input type="checkbox" name="subjects" value="Computer Science"> Computer Science
+                    <input type="checkbox" name="subjects" value="Physical Education"> Physical Education
+                    <!-- Add more as needed -->
+                </div>
+
+                <!-- 3. Interests and Hobbies -->
+                <h2>Interests and Hobbies</h2>
+                <label for="interest-category">Interest Category:</label>
+                <select id="interest-category" name="interest-category">
+                    <option value="STEM">STEM</option>
+                    <option value="Humanities">Humanities</option>
+                    <option value="Arts">Arts</option>
+                    <option value="Commerce">Commerce</option>
+                    <option value="Social Sciences">Social Sciences</option>
+                    <!-- Add more as needed -->
+                </select>
+
+                <label>Hobbies and Extracurricular Activities:</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" name="hobbies" value="Sports"> Sports
+                    <input type="checkbox" name="hobbies" value="Music"> Music
+                    <input type="checkbox" name="hobbies" value="Dance"> Dance
+                    <input type="checkbox" name="hobbies" value="Coding"> Coding
+                    <input type="checkbox" name="hobbies" value="Reading"> Reading
+                    <!-- Add more as needed -->
+                </div>
+
+                <!-- 4. Personality and Career Aspirations -->
+                <h2>Personality and Career Aspirations</h2>
+                <label for="career-goals">Career Goals:</label>
+                <input type="text" id="career-goals" name="career-goals">
+
+                <label>Work Preferences:</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" name="work-preferences" value="Problem-solving"> Problem-solving
+                    <input type="checkbox" name="work-preferences" value="Creativity"> Creativity
+                    <input type="checkbox" name="work-preferences" value="Leadership"> Leadership
+                    <input type="checkbox" name="work-preferences" value="Teamwork"> Teamwork
+                    <input type="checkbox" name="work-preferences" value="Research"> Research
+                    <!-- Add more as needed -->
+                </div>
+
+                <!-- 5. Skills and Competencies -->
+                <h2>Skills and Competencies</h2>
+                <label>Technical Skills:</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" name="technical-skills" value="Coding"> Coding
+                    <input type="checkbox" name="technical-skills" value="Data Analysis"> Data Analysis
+                    <input type="checkbox" name="technical-skills" value="Design"> Design
+                    <input type="checkbox" name="technical-skills" value="Web Development"> Web Development
+                    <input type="checkbox" name="technical-skills" value="Cloud Computing"> Cloud Computing
+                    <!-- Add more as needed -->
+                </div>
+
+                <label>Soft Skills:</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" name="soft-skills" value="Communication"> Communication
+                    <input type="checkbox" name="soft-skills" value="Teamwork"> Teamwork
+                    <input type="checkbox" name="soft-skills" value="Leadership"> Leadership
+                    <input type="checkbox" name="soft-skills" value="Time Management"> Time Management
+                    <input type="checkbox" name="soft-skills" value="Adaptability"> Adaptability
+                    <!-- Add more as needed -->
+                </div>
+
+                <!-- 6. Preferred Learning Style -->
+                <h2>Preferred Learning Style</h2>
+                <label for="learning-style">Learning Style:</label>
+                <select id="learning-style" name="learning-style">
+                    <option value="Visual">Visual</option>
+                    <option value="Auditory">Auditory</option>
+                    <option value="Hands-on">Hands-on</option>
+                    <option value="Reading/Writing">Reading/Writing</option>
+                </select>
+
+                <button type="button" onclick="suggestCareers()">Get Suggestions</button>
+            </form>
+        </section>
+
+        <section id="suggestions" class="suggestions-section"></section>
+    </main>
+
+    <footer>
+        <p>Career Path Suggestions &copy; 2024</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
